@@ -1,0 +1,39 @@
+@use "../themes/defaultTheme" as *;
+@use "../util/mixins" as *;
+@use "../util/variables" as *;
+
+nav {
+  z-index: 99;
+  overflow: hidden;
+  display: flex;
+  position: static;
+  top: 0;
+  right: 0;
+  left: 0;
+  color: $secondary;
+  background-color: $primary-4;
+  height: 5rem;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: $light-shadow;
+  .image-container{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+
+  }
+  
+  .nav-link {
+    cursor: pointer;
+    h3 {
+      font-size: 2rem;
+      &:hover,&:active {
+        text-shadow: $text-dark-shadow;
+      }
+    }
+  }
+}
